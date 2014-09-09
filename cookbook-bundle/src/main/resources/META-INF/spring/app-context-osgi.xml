@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  					  http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+
+
+  					  http://www.springframework.org/schema/osgi 
+  					  http://www.springframework.org/schema/osgi/spring-osgi.xsd
+  					  http://www.springframework.org/schema/osgi-compendium 
+	  http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+
+	<osgi:service id="storeLocatorServiceOsgi" ref="storeLocatorService"
+		interface="com.cookbook.cq.service.StoreLocatorService" />
+		
+	<osgi:reference id="resourceResolverFactory" 
+    	interface="org.apache.sling.api.resource.ResourceResolverFactory" />
+    	
+    <bean id="osgiBundleConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="propertiesArray">
+			<array>
+				<osgix:cm-properties id="cookbook"
+					persistent-id="com.cookbook.cq" />
+				
+				<osgix:cm-properties id="common"
+					persistent-id="com.cookbook.cq.common" />
+					
+			</array>
+		</property>
+	</bean>
+			
+</beans>

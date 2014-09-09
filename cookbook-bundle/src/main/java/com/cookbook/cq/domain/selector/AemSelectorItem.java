@@ -1,0 +1,36 @@
+package com.cookbook.cq.domain.selector;
+
+import com.cookbook.cq.domain.Base;
+
+/**
+ * User: bvaughn
+ * Date: 9/8/14
+ */
+public class AemSelectorItem extends Base {
+    private String id;
+    private String name;
+
+    public AemSelectorItem() {
+    }
+
+    public AemSelectorItem(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}

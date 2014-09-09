@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  					  http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- Credentials provider needed by apache default http client -->
+	<bean id="credentialProvider" class="org.apache.http.impl.client.BasicCredentialsProvider" />
+
+	<!-- Used to invoke a method in BasicCredentialsProvider.  This has to be done this way as BasicCredentialsProvider does not take 
+	provider and credentials in constructor or setter method.  It has to set by invoking setCredentials() method and passing two arguments -->  
+	<bean id="methodInvoke" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+	    <property name="targetObject"><ref local="credentialProvider" /> </property>
+	    <property name="targetMethod" value="setCredentials"> </property>
+	    <property name="arguments"  >
+	        <list>
+	            <ref local="authScope" />
+	            <ref local="credentials" />
+	        </list>
+	    </property>
+	</bean>
+	
+	<!-- Authorization scope for accessing restful service.  Since we want this template to be used for everything, we are setting up it with defaults -->
+	<bean id="authScope" class="org.apache.http.auth.AuthScope">
+	    <constructor-arg name="host"><value>localhost</value></constructor-arg>
+	    <constructor-arg><value>4502</value> </constructor-arg>
+	    <constructor-arg><null /></constructor-arg>
+	    <constructor-arg><null /></constructor-arg>
+	</bean>
+	
+	<!-- Username and Password Credentials to access restful service -->
+	<bean id="credentials" class="org.apache.http.auth.UsernamePasswordCredentials">
+	    <constructor-arg name="userName"><value>admin</value></constructor-arg>
+	    <constructor-arg name="password"><value>admin</value></constructor-arg>
+	</bean>
+	
+	<!-- Client factory which uses Apache HttpClient implementation.  Note that it DO NOT use apache commons httpclient -->
+	<bean id="httpClientFactory" class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory"> 
+	    <constructor-arg ref="httpClient"/> 
+	</bean>
+	
+	<bean id="httpClient" class="org.apache.http.impl.client.DefaultHttpClient">
+	    <property name="credentialsProvider" ref="credentialProvider"/>
+	</bean>
+
+	
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<constructor-arg ref="httpClientFactory" />
+		<property name="messageConverters"> 
+        <list> 
+             <bean class="com.cookbook.cq.dao.util.GsonHttpMessageConverter"></bean> 
+            <bean class="org.springframework.http.converter.FormHttpMessageConverter"/> 
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+        </list> 
+    </property>
+    </bean>
+
+</beans>
