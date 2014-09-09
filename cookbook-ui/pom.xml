@@ -58,6 +58,12 @@
                         <filter>
                             <root>/etc/designs/cookbook</root>
                         </filter>
+                        <filter>
+                            <root>/etc/clientlibs/common</root>
+                        </filter>
+                        <filter>
+                            <root>/etc/clientlibs/cookbook</root>
+                        </filter>
                     </filters>
                     <embeddeds>
                         <embedded>

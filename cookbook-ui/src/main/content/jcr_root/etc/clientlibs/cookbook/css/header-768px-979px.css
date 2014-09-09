@@ -1,7 +1,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
 	.cbheader .topnav li {
 		/*yellow*/
-		background: #CFFF0D;
+		/*background: #CFFF0D;*/
 		display: inline-block;
 		list-style-type: none;
 		width: 25%;
