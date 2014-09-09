@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="3f012c9f-75cb-41a0-a216-056d0b710378">
+    <jcr:content
+        cq:name="175px-The_Two_Towers_(novel)_-1st_edition_cover.JPG"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:52.052-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/j-r-r-tolkien,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="{Long}24"
+            dam:Comments="File source: //en.wikipedia.org/wiki/File:The_Two_Towers_(novel)_-1st_edition_cover.JPG&#xa;"
+            dam:extracted="{Date}2013-10-17T16:36:03.388-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Double}2.8333332538604736"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Double}1.8229166269302368"
+            dam:Progressive="no"
+            dam:sha1="579296b3305688d14b343012887b73c500f330e1"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:44:56.944-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:52.052-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}272"
+            tiff:ImageWidth="{Long}175"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

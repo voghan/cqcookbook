@@ -1,0 +1,21 @@
+#Run first to make sure environment is ok
+#Perform build 
+# run at /cqcookbook
+mvn clean install
+
+SERVER NEEDS TO BE RUNNING 
+
+#Run second to install dependancies on server 
+#Perform build of dependancies and deploy to server
+# run at /cqcookbbok/cookbook-dependencies
+mvn clean install -P autoInstallDependencies
+
+#Run third to install content
+#Perform build of content and deploy to server
+# run at cqcookbook/cookbook-content
+mvm clean install -P autoInstallContent
+
+#Run last to install bundle and UI code
+#Perform build and deploy code from UI and bundle modules
+# run at /cqcookbook
+mvn clean install -P autoInstallPackage

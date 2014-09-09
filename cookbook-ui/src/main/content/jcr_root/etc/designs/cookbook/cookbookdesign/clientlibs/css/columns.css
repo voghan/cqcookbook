@@ -1,0 +1,37 @@
+/* column control layouts */
+div.cq-colctrl-cols {width: 100%; float: left; }
+
+div.cq-colctrl-default { width: 100%;}
+
+/* layout 0 : 50% 50% ( grid6 + grid6 ) */
+div.cq-colctrl-lt0 { }
+div.cq-colctrl-lt0-c0 { width: 50%; float: left;}
+div.cq-colctrl-lt0-c1 { width: 50%; float: left;}
+
+/* layout 1 : 33% 33% 33%( grid4 + grid4 + grid4 ) */
+div.cq-colctrl-lt1 { }
+div.cq-colctrl-lt1-c0 { width: 33%; float: left; }
+div.cq-colctrl-lt1-c1 { width: 33%; float: left; }
+div.cq-colctrl-lt1-c2 { width: 33%; float: left; }
+
+/* layout 2: 16% 16% 16% 33% ( grid2.6 + grid2.6 + grid2.6 + grid4 ) */
+div.cq-colctrl-lt2 { }
+div.cq-colctrl-lt2-c0 { width: 16%; float: left; }
+div.cq-colctrl-lt2-c1 { width: 16%; float: left; }
+div.cq-colctrl-lt2-c2 { width: 16%; float: left; }
+div.cq-colctrl-lt2-c3 { width: 16%; float: left; }
+
+/* layout 3: 4 x 25% ( grid3 + grid3 + grid3 + grid3 ) */
+div.cq-colctrl-lt3 { }
+div.cq-colctrl-lt3-c0 { width: 25%; float: left; }
+div.cq-colctrl-lt3-c1 { width: 25%; float: left; }
+div.cq-colctrl-lt3-c2 { width: 25%; float: left; }
+div.cq-colctrl-lt3-c3 { width: 25%; float: left; }
+
+/* layout 4: 5 x 20% ( grid2.5 + grid2.5 + grid2.5 + grid2.5 + grid2.5 ) */
+div.cq-colctrl-lt4 { }
+div.cq-colctrl-lt4-c0 { width: 20%; float: left; }
+div.cq-colctrl-lt4-c1 { width: 20%; float: left; }
+div.cq-colctrl-lt4-c2 { width: 20%; float: left; }
+div.cq-colctrl-lt4-c3 { width: 20%; float: left; }
+div.cq-colctrl-lt4-c4 { width: 20%; float: left; }

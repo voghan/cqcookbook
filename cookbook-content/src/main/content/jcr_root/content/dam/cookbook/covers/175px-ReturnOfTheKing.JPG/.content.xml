@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="940524a8-78b6-4cf2-a006-a3456e258d71">
+    <jcr:content
+        cq:name="175px-ReturnOfTheKing.JPG"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:54.245-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/j-r-r-tolkien,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:ReturnOfTheKing.JPG&#xa;"
+            dam:extracted="{Date}2013-10-17T16:36:02.000-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="1"
+            dam:Numberoftextualcomments="1"
+            dam:Physicalheightindpi="96"
+            dam:Physicalheightininches="2.9479167461395264"
+            dam:Physicalwidthindpi="96"
+            dam:Physicalwidthininches="1.8229166269302368"
+            dam:Progressive="no"
+            dam:sha1="a683550f2914fa7c43b790444b2f7488f51f2e08"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:43:23.000-05:00"
+            jcr:lastModified="{Date}2013-10-17T16:43:23.223-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}283"
+            tiff:ImageWidth="{Long}175"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        cq:lastModified="{Date}2013-10-20T23:16:46.813-05:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[cookbook:authors,cookbook:authors/j-r-r-tolkien,cookbook:genres,cookbook:genres/fantasy,cookbook:genres/fiction]"
+        cq:template="/apps/cookbook/templates/cookbook_home"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="The Two Towers"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <bookdetail
+                jcr:created="{Date}2013-10-18T15:11:57.090-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2013-10-18T15:23:38.380-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cookbook/components/content/bookDetail"
+                author="J. R. R. Tolkien"
+                publisher="Unwin"
+                textIsRich="true"
+                title="The Two Towers"
+                year="1954">
+                <image
+                    jcr:lastModified="{Date}2013-10-18T15:23:38.380-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/image"
+                    fileReference="/content/dam/cookbook/covers/175px-The_Two_Towers_(novel)_-1st_edition_cover.JPG"
+                    imageRotate="0"/>
+            </bookdetail>
+        </par>
+        <image
+            jcr:lastModified="{Date}2013-10-20T23:16:46.771-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

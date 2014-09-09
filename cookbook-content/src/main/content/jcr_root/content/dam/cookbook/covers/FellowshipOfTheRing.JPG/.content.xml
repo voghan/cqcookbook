@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="668fd240-e9d2-4c70-99f1-dfdad35b4337">
+    <jcr:content
+        cq:name="FellowshipOfTheRing.JPG"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:51.516-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/j-r-r-tolkien,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="{Long}24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:FellowshipOfTheRing.JPG&#xa;"
+            dam:extracted="{Date}2013-10-17T16:36:03.831-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Double}2.8958332538604736"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Double}1.8229166269302368"
+            dam:Progressive="no"
+            dam:sha1="99c941a763fb1acb6b7238a04696f72c70d306d0"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:45:19.793-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:51.515-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}278"
+            tiff:ImageWidth="{Long}175"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

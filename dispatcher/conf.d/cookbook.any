@@ -1,0 +1,194 @@
+  # first farm entry (label is not important, just for your convenience)
+  /cookbook
+    {
+    # client headers which should be passed through to the render instances
+    # (feature supported since dispatcher build 2.6.3.5222)
+    /clientheaders
+      {
+      "referer"
+      "user-agent"
+      "authorization"
+      "from"
+      "content-type"
+      "content-length"
+      "accept-charset"
+      "accept-encoding"
+      "accept-language"
+      "accept"
+      "host"
+      "if-match"
+      "if-none-match"
+      "if-range"
+      "if-unmodified-since"
+      "max-forwards"
+      "proxy-authorization"
+      "proxy-connection"
+      "range"
+      "cookie"
+      "cq-action"
+      "cq-handle"
+      "handle"
+      "action"
+      "cqstats"
+      "depth"
+      "translate"
+      "expires"
+      "date"
+      "dav"
+      "ms-author-via"
+      "if"
+      "lock-token"
+      "x-expected-entity-length"
+      "destination"
+      }
+    # hostname globbing for farm selection (virtual domain addressing)
+    /virtualhosts
+      {
+      # entries will be compared against the 'host' request header.
+      # example: www.company.com
+      # example: intranet.*
+      "*"
+      }
+    # the load will be balanced among these render instances
+    /renders
+      {
+      /publish1
+        {
+        # hostname or IP of the render
+        /hostname "localhost"
+        # port of the render
+        /port "4503"
+        # connect timeout in milliseconds, 0 to wait indefinitely
+        /timeout "0"
+        }
+      }
+    # only handle the requests in the following acl. default is 'none'
+    # the glob pattern is matched against the first request line
+    /filter
+      {
+      # deny everything and allow specific entries
+      /0001 { /type "deny"  /glob "*" }
+
+      # open consoles
+ #    /0012 { /type "allow" /glob "* /crx/*"    }  # allow content repository
+ #    /0013 { /type "allow" /glob "* /system/*" }  # allow OSGi console
+
+      # allow non-public content directories
+ #    /0021 { /type "allow" /glob "* /apps/*"   }  # allow apps access
+      /0022 { /type "allow" /glob "* /bin/*"    }
+      /0023 { /type "allow" /glob "* /content*" }  # disable this rule to allow mapped content only
+
+ #    /0024 { /type "allow" /glob "* /libs/*"   }
+ #    /0025 { /type "deny"  /glob "* /libs/shindig/proxy*" } # if you enable /libs close access to proxy
+
+ #    /0026 { /type "allow" /glob "* /home/*"   }
+ #    /0027 { /type "allow" /glob "* /tmp/*"    }
+ #    /0028 { /type "allow" /glob "* /var/*"    }
+
+      # enable specific mime types in non-public content directories
+      /0041 { /type "allow" /glob "* *.css *"   }  # enable css
+      /0042 { /type "allow" /glob "* *.gif *"   }  # enable gifs
+      /0043 { /type "allow" /glob "* *.ico *"   }  # enable icos
+      /0044 { /type "allow" /glob "* *.js *"    }  # enable javascript
+      /0045 { /type "allow" /glob "* *.png *"   }  # enable png
+      /0046 { /type "allow" /glob "* *.swf *"   }  # enable flash
+      /0047 { /type "allow" /glob "* *.svg *"   }  # enable SVG
+      /0048 { /type "allow" /glob "* *.woff *"  }  # enable woff
+      /0049 { /type "allow" /glob "* *.ttf *"   }  # enable ttf
+      /0050 { /type "allow" /glob "* *.eot *"   }  # enable eot
+      /0051 { /type "allow" /glob "* *.jpg *"   }  # enable jpg
+
+      /0052 { /type "allow" /glob "* /services/*" } # enable servlet services
+
+      # enable features
+      /0061 { /type "allow" /glob "POST /content/[.]*.form.html" }  # allow POSTs to form selectors under content
+      /0062 { /type "allow" /glob "* /libs/cq/personalization/*" }  # enable personalization
+
+      # deny content grabbing
+      /0081 { /type "deny"  /glob "GET *.infinity.json*" }
+      /0082 { /type "deny"  /glob "GET *.tidy.json*"     }
+      /0083 { /type "deny"  /glob "GET *.sysview.xml*"   }
+      /0084 { /type "deny"  /glob "GET *.docview.json*"  }
+      /0085 { /type "deny"  /glob "GET *.docview.xml*"   }
+      /0086 { /type "deny"  /glob "GET *.*[0-9].json*"   }
+      /0087 { /type "deny"  /glob "GET *.feed.xml*"      }
+ #    /0088 { /type "allow" /glob "GET *.1.json*"        }  # allow one-level json requests
+      /0089 { /type "allow" /glob "GET /etc/clientcontext/.*/*.json*.*" }
+
+      # deny query
+      /0090 { /type "deny"  /glob "* *.query.json*" }
+      }
+
+    # allow propagation of replication posts (should seldomly be used)
+    /propagateSyndPost "0"
+
+    # the cache is used to store requests from the renders for faster delivery
+    # for a second time.
+    /cache
+      {
+      # the cacheroot must be equal to the document root of the webserver
+      /docroot "/var/www/html/content/cookbook"
+
+      # sets the level upto which files named ".stat" will be created in the
+      # document root of the webserver. when an activation request for some
+      # handle is received, only files within the same subtree are affected
+      # by the invalidation.
+      /statfileslevel "0"
+      # caches also authorized data
+      /allowAuthorized "1"
+
+      # the rules define, which pages should be cached. please note that
+      # - only GET requests are cached
+      # - only requests with an extension are cached
+      # - only requests without query parameters ( ? ) are cached
+      # - only unauthorized pages are cached unless allowUnauthorized is set to 1
+      /rules
+        {
+        /0000
+          {
+          # the globbing pattern to be compared against the url
+          # example: *       -> everything
+          #     : /foo/bar.*    -> only the /foo/bar documents
+          #     : /foo/bar/*    -> all pages below /foo/bar
+          #     : /foo/bar[./]* -> all pages below and /foo/bar itself
+          #     : *.html        -> all .html files
+          /glob "*"
+          /type "allow"
+          }
+        }
+      # the invalidate section defines those pages which are 'invalidated' after
+      # any activation. please note that, the activated page itself and all
+      # related documents are flushed on an modification. for example: if the
+      # page /foo/bar is activated, all /foo/bar.* files are removed from the
+      # cache.
+      /invalidate
+        {
+        /0000
+          {
+          /glob "*"
+          /type "deny"
+          }
+        /0001
+          {
+          /glob "*.html"
+          /type "allow"
+          }
+        }
+      }
+    # the statistics define, how the load should be balanced among the renders
+    # according to the media-type.
+    /statistics
+      {
+      /categories
+        {
+        /html
+          {
+          /glob "*.html"
+          }
+        /others
+          {
+          /glob "*"
+          }
+        }
+      }
+    }

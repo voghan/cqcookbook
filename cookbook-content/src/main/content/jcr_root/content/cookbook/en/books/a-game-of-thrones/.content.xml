@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        cq:lastModified="{Date}2013-10-23T09:30:18.244-05:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
+        cq:template="/apps/cookbook/templates/cookbook_home"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="A Game of Thrones"
+        jcr:uuid="acb2959f-cc41-4be2-99c4-c0eb5d61841c"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <bookdetail
+                jcr:created="{Date}2013-10-17T09:04:24.234-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2013-10-23T09:30:18.116-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cookbook/components/content/bookDetail"
+                author="George R. R. Matrin"
+                descr="&lt;p>blackbird&lt;/p>&#xa;"
+                isdn="12345"
+                publisher="Batan"
+                textIsRich="true"
+                title="A Game of Thrones"
+                year="1996">
+                <image
+                    jcr:lastModified="{Date}2013-10-23T09:30:18.116-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/image"
+                    fileReference="/content/dam/cookbook/covers/200px-AGameOfThrones.jpg"
+                    imageCrop="6,5,200,296"
+                    imageRotate="90"/>
+            </bookdetail>
+        </par>
+        <image
+            jcr:lastModified="{Date}2013-10-21T09:01:32.650-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

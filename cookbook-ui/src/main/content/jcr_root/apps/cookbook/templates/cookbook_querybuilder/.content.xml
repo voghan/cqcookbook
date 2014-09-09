@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Cookbook QueryBuilder Page Template"
+    jcr:primaryType="cq:Template"
+    jcr:title="Cookbook QueryBuilder Page Template"
+    allowedPaths="[/content/cookbook(/.*)?]"
+    ranking="{Long}1">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_querybuilder"/>
+</jcr:root>

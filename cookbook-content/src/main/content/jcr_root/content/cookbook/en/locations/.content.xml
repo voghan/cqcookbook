@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        cq:lastModified="{Date}2013-10-28T14:13:05.381-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cookbook/templates/cookbook_home"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Locations"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <locations
+                jcr:created="{Date}2013-10-22T10:25:57.219-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2013-10-22T11:11:59.271-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cookbook/components/content/locations"/>
+        </par>
+        <image
+            jcr:lastModified="{Date}2013-10-28T14:13:05.348-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+    <allen-park-mi/>
+    <dearborn-mi/>
+    <flynt-mi/>
+    <highland-park-mi/>
+    <bloomington-mn/>
+    <eagan-mn/>
+    <hopkins-mn/>
+    <plymouth-mn/>
+    <st-paul-mn/>
+</jcr:root>

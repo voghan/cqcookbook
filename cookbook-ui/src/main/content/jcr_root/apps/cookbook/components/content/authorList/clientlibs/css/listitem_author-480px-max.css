@@ -1,0 +1,6 @@
+@media (max-width: 480px) {
+	
+	.list .authors .genres {
+		float: none;
+	}
+}

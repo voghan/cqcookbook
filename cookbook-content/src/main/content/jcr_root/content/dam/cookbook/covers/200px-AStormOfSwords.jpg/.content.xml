@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="e221abc5-45be-4ec3-84e3-259704ae4f9b">
+    <jcr:content
+        cq:name="200px-AStormOfSwords.jpg"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:49.374-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="{Long}24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:AStormOfSwords.jpg&#xa;"
+            dam:extracted="{Date}2013-10-13T10:01:12.430-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Double}4.027777671813965"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Double}2.777777671813965"
+            dam:Progressive="no"
+            dam:sha1="a26b8151bcb3dfd0cf65c865c94a59c0d9e7a5e9"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-16T10:53:22.755-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:49.373-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}290"
+            tiff:ImageWidth="{Long}200"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

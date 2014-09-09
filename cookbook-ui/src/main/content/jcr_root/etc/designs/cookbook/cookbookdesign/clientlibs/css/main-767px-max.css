@@ -1,0 +1,8 @@
+@media (max-width: 767px) {
+	
+	.cbbody {
+	    border-bottom: 1px solid #fff;
+	    margin: 2px 2px 2px 2px;
+	    background: #f2f2f2;
+	}
+}

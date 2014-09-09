@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="c48676eb-8d87-4fb9-9815-aba7dce70293">
+    <jcr:content
+        cq:name="A_Dance_With_Dragons_US.jpg"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:54.076-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2013-10-17T16:36:04.299-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Double}3.125"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Double}2.0416667461395264"
+            dam:Progressive="no"
+            dam:sha1="9c062fc449de49d2d04ed7e251814125b91e76bf"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:46:03.464-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:54.076-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}300"
+            tiff:ImageWidth="{Long}196"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

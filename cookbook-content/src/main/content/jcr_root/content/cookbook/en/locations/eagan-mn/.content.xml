@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        cq:lastModified="{Date}2013-11-01T12:19:57.313-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2013-10-31T15:50:58.419-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[cookbook:stores/mn/eagan/1004]"
+        cq:template="/apps/cookbook/templates/cookbook_store"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Eagan, MN"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_store">
+        <image
+            jcr:lastModified="{Date}2013-11-01T12:19:57.272-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

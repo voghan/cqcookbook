@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-03-28T11:13:27.743-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/segment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Book Worm"
+        sling:resourceType="cq/personalization/components/segmentpage">
+        <traits
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/personalization/components/traits/logic/and">
+            <andpar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <tagcloud
+                    jcr:created="{Date}2014-03-28T09:12:51.086-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2014-03-28T11:13:27.740-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/personalization/components/traits/tagcloud"
+                    jsObject="clientcontext.tagcloud"
+                    operator="greater"
+                    tagId="[cookbook:genres/fantasy]"
+                    value="5"
+                    valueFormat="parseInt"/>
+            </andpar>
+        </traits>
+    </jcr:content>
+</jcr:root>

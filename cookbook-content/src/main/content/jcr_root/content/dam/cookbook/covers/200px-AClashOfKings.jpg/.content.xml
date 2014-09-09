@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="0a1321e2-a220-4310-891e-8a0700e91b81">
+    <jcr:content
+        cq:name="200px-AClashOfKings.jpg"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:56.298-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        restored="{Boolean}true">
+        <metadata
+            cq:tags="[cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:AClashOfKings.jpg&#xa;"
+            dam:extracted="{Date}2013-10-13T10:01:12.000-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="1"
+            dam:Numberoftextualcomments="1"
+            dam:Physicalheightindpi="96"
+            dam:Physicalheightininches="3.0104167461395264"
+            dam:Physicalwidthindpi="96"
+            dam:Physicalwidthininches="2.0833332538604736"
+            dam:Progressive="no"
+            dam:sha1="3cbaf1e8bbda63c6a61328d89c8e9a53a0d3f0ca"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:42:58.000-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:54.511-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}289"
+            tiff:ImageWidth="{Long}200"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

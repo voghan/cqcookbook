@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="e1b44abd-64df-4924-89c3-87aa2fa1df9f">
+    <jcr:content
+        cq:name="225px-MConnelly.jpg"
+        cq:parentPath="/content/dam/cookbook/authors"
+        jcr:lastModified="{Date}2014-02-04T12:11:56.199-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        restored="{Boolean}true">
+        <metadata
+            cq:tags="[cookbook:authors,cookbook:authors/michael-connelly]"
+            dam:Bitsperpixel="24"
+            dam:Comments="File source: http://commons.wikimedia.org/wiki/File:MConnelly.jpg&#xa;"
+            dam:extracted="{Date}2013-10-17T16:24:30.000-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="1"
+            dam:Numberoftextualcomments="1"
+            dam:Physicalheightindpi="72"
+            dam:Physicalheightininches="3.8888888359069824"
+            dam:Physicalwidthindpi="72"
+            dam:Physicalwidthininches="3.125"
+            dam:Progressive="no"
+            dam:sha1="b951b5197947460cdda2cd639efd9decc12165ff"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-21T13:41:37.000-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:53.149-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}280"
+            tiff:ImageWidth="{Long}225"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

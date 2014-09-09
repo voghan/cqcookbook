@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Toolbar (Design)"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <absParent
+            jcr:primaryType="nt:unstructured"
+            fieldDescription="(eg: 1 for /content/site)"
+            fieldLabel="Parent Level (absolute)"
+            name="./absParent"
+            xtype="textfield"/>
+        <toolbar
+            jcr:primaryType="nt:unstructured"
+            fieldDescription="(name of the toolbar used to filter pages using their cq:toolbars property)"
+            fieldLabel="Toolbar Selector"
+            name="./toolbar"
+            xtype="textfield"/>
+        <list
+            jcr:primaryType="nt:unstructured"
+            fieldDescription="Check for HTML unordered list style"
+            fieldLabel="HTML List"
+            name="./list"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

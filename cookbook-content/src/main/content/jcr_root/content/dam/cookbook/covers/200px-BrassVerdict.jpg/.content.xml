@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="944eae33-31be-4135-aa1c-bc325f4b180a">
+    <jcr:content
+        cq:name="200px-BrassVerdict.jpg"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:54.903-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        newRendition="{Boolean}true"
+        restored="{Boolean}true">
+        <metadata
+            cq:tags="[cookbook:authors,cookbook:authors/michael-connelly,cookbook:genres,cookbook:genres/crime,cookbook:genres/fiction]"
+            dam:Bitsperpixel="24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:BrassVerdict.jpg&#xa;"
+            dam:extracted="{Date}2013-10-17T16:36:02.000-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="1"
+            dam:Numberoftextualcomments="1"
+            dam:Physicalheightindpi="300"
+            dam:Physicalheightininches="0.8899999856948853"
+            dam:Physicalwidthindpi="300"
+            dam:Physicalwidthininches="0.6666666865348816"
+            dam:Progressive="no"
+            dam:sha1="e7df478dbe02bf877bb31f1ddb3a725199e817d8"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:44:12.000-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:54.903-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}267"
+            tiff:ImageWidth="{Long}200"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

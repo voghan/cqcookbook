@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        cq:lastModified="{Date}2014-02-12T13:58:24.459-06:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cookbook/templates/cookbook_home"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="toolbar"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_home"
+        hideInNav="true">
+        <image
+            jcr:lastModified="{Date}2014-02-04T11:38:48.322-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+    <contact-us/>
+    <search/>
+    <home/>
+    <privacy-policy/>
+    <legal/>
+    <site-map/>
+</jcr:root>

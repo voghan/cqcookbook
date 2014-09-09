@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="07d5d576-f243-44d6-957d-03f30d4a5893">
+    <jcr:content
+        cq:name="200px-Lincolnlawyer.jpg"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:52.491-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/michael-connelly,cookbook:genres/crime,cookbook:genres/fiction]"
+            dam:Bitsperpixel="{Long}24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:Lincolnlawyer.jpg&#xa;"
+            dam:extracted="{Date}2013-10-17T16:36:02.027-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}96"
+            dam:Physicalheightininches="{Double}3.25"
+            dam:Physicalwidthindpi="{Long}96"
+            dam:Physicalwidthininches="{Double}2.0833332538604736"
+            dam:Progressive="no"
+            dam:sha1="7ddb3efb181dcaf59ac1251d9f0b824e24c04f1a"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:43:50.252-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:52.488-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}312"
+            tiff:ImageWidth="{Long}200"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

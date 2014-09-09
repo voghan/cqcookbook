@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="c96ae3ec-e84d-450b-911b-2501ee53816c">
+    <jcr:content
+        cq:name="200px-AGameOfThrones.jpg"
+        cq:parentPath="/content/dam/cookbook/covers"
+        jcr:lastModified="{Date}2014-02-04T12:11:49.381-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
+            dam:Bitsperpixel="{Long}24"
+            dam:Comments="File source: http://en.wikipedia.org/wiki/File:AGameOfThrones.jpg&#xa;"
+            dam:extracted="{Date}2013-10-13T10:01:12.430-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}100"
+            dam:Physicalheightininches="{Double}2.9800000190734863"
+            dam:Physicalwidthindpi="{Long}100"
+            dam:Physicalwidthininches="{Double}2.0"
+            dam:Progressive="no"
+            dam:sha1="1a2961dcb827aaac88a2af8d2d3fd0110cdd1ea7"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-17T16:42:36.714-05:00"
+            jcr:lastModified="{Date}2014-02-04T12:11:49.381-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}298"
+            tiff:ImageWidth="{Long}200"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

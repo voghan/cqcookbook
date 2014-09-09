@@ -1,0 +1,25 @@
+.location-result .location-results-list li {
+	list-style-type: none;
+}
+
+.location-result .location-results-list .results-location-title {
+	color: #646464;
+    font-size: 1.275em;
+}
+
+.location-result .location-results-list .results-location-title .results-location_url {
+    font-size: 0.65em;
+}
+
+.location-result .location-results-list .results-location-details {
+    font-size: 1.0em;
+}
+
+.location-result .location-results-list .results-location-phone {
+    font-size: 0.85em;
+}
+
+.location-result .location-results-list .results-location-hours {
+	color: #646464;
+    font-size: 0.65em;
+}

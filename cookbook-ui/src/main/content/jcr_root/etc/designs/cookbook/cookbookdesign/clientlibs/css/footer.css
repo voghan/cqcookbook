@@ -1,0 +1,17 @@
+.cbfooter {
+    background: #B9DBE5;
+    color: #646464;
+    font-size: 0.875em;
+    background-position-y: 243px;
+    
+    padding-top:21px;
+    padding-bottom:21px;
+
+}
+
+.cbfooter .toolbar li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+	float: right
+}

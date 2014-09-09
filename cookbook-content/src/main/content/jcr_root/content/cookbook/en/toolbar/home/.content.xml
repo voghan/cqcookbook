@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/cookbook/cookbookdesign"
+        cq:lastModified="{Date}2014-03-05T12:14:11.386-06:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:toolbars="[header]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <image
+                jcr:created="{Date}2014-02-27T11:35:47.142-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-27T12:37:24.087-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/image"
+                fileReference="/content/dam/geometrixx-outdoors/banners/winter.jpg"
+                imageCrop="9,0,926,386"
+                imageRotate="0"/>
+            <text_5
+                jcr:created="{Date}2014-02-26T09:51:18.078-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T09:51:34.227-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Welcome to CQ Cookbook!&lt;/b>&lt;/p>&#xa;&lt;p>The purpose of this site is to give an overview on learning the CQ platform. &amp;nbsp;The training is broken into four parts and builds upon the itself to flush out the functionality of the site.&lt;/p>&#xa;"
+                textIsRich="true"/>
+            <colctrl
+                jcr:created="{Date}2014-02-26T09:19:35.116-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T10:15:05.733-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys/colctrl"
+                layout="2;cq-colctrl-lt0"/>
+            <text
+                jcr:created="{Date}2014-02-26T09:21:57.301-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T11:13:18.637-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session1&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Framework overview&lt;/li>&#xa;&lt;li>Project structure review&lt;/li>&#xa;&lt;li>Environment setup&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <text_1
+                jcr:created="{Date}2014-02-26T09:47:39.288-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T09:48:58.545-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session 3&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Tagging&lt;/li>&#xa;&lt;li>OSGi Services&lt;/li>&#xa;&lt;li>Servlets&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <text_4
+                jcr:created="{Date}2014-02-26T09:47:50.117-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T09:50:28.710-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session 5&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Custom Author List component&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <text_6
+                jcr:created="{Date}2014-02-26T11:03:06.307-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T11:12:33.094-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session 7&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>&amp;nbsp;&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <reference
+                jcr:created="{Date}2014-03-05T12:12:43.006-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-03-05T12:14:11.377-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/reference"
+                path="/content/cookbook/en/books/a-game-of-thrones/jcr:content/par/bookdetail"/>
+            <col_break13934280171930
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys/colctrl"
+                controlType="break"/>
+            <text_0
+                jcr:created="{Date}2014-02-26T09:22:09.776-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T09:48:09.263-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session2&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Components&lt;/li>&#xa;&lt;li>Templets&lt;/li>&#xa;&lt;li>Designs ..oh my!&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <text_2
+                jcr:created="{Date}2014-02-26T09:47:43.000-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T09:49:05.059-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session 4&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Review Components, Templates and Design&lt;/li>&#xa;&lt;li>Rest Integration&lt;/li>&#xa;&lt;li>Spring OSGi service&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <text_3
+                jcr:created="{Date}2014-02-26T09:47:45.591-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-26T09:50:07.803-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/text"
+                text="&lt;p>&lt;b>Session 6&lt;/b>&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Foundation Toolbar component&lt;/li>&#xa;&lt;li>Foundation Logo component&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+            <col_end13934279751190
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys/colctrl"
+                controlType="end"/>
+        </par>
+    </jcr:content>
+</jcr:root>

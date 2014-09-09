@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:isCheckedOut="{Boolean}true"
+          jcr:mixinTypes="[mix:versionable]"
+          jcr:primaryType="dam:Asset"
+          jcr:uuid="807eff23-eeb8-4680-b8ce-9a63da9b55c4">
+    <jcr:content
+        cq:name="George_R.R._Martin.jpg"
+        cq:parentPath="/content/dam/cookbook/authors"
+        jcr:lastModified="{Date}2014-02-04T12:11:55.095-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            cq:tags="[cookbook:authors,cookbook:authors/george-r-r-martin]"
+            dam:Bitsperpixel="24"
+            dam:extracted="{Date}2013-10-17T16:35:27.000-05:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="1"
+            dam:Numberoftextualcomments="0"
+            dam:Physicalheightindpi="72"
+            dam:Physicalheightininches="3.680555582046509"
+            dam:Physicalwidthindpi="72"
+            dam:Physicalwidthininches="3.055555582046509"
+            dam:Progressive="no"
+            dam:sha1="83fdb5f4a8e35aab411f38bd3a829b17d07cc540"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2013-10-21T14:58:28.000-05:00"
+            jcr:lastModified="{Date}2013-10-21T15:58:28.542-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}265"
+            tiff:ImageWidth="{Long}220"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>

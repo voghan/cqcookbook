@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <_x0032_00px-AStormOfSwords.jpg/>
+    <_x0032_00px-AGameOfThrones.jpg/>
+    <_x0032_00px-AClashOfKings.jpg/>
+    <_x0031_75px-ReturnOfTheKing.JPG/>
+    <_x0032_00px-Lincolnlawyer.jpg/>
+    <_x0032_00px-BrassVerdict.jpg/>
+    <TheReversalBook.jpg/>
+    <_x0031_75px-The_Two_Towers__x0028_novel_x0029__-1st_edition_cover.JPG/>
+    <FellowshipOfTheRing.JPG/>
+    <AFeastForCrows.jpg/>
+    <A_Dance_With_Dragons_US.jpg/>
+</jcr:root>

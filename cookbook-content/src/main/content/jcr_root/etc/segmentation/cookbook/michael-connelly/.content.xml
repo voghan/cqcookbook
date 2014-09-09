@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-03-28T11:16:06.680-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/segment"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Michael Connelly"
+        jcr:uuid="15cfde5d-e0e3-4c62-8790-734dff8cdb1a"
+        sling:resourceType="cq/personalization/components/segmentpage">
+        <traits
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/personalization/components/traits/logic/and">
+            <andpar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <generic
+                    jcr:created="{Date}2014-03-27T14:03:36.481-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2014-03-28T11:16:06.676-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/personalization/components/traits/generic"
+                    jsObject="cookbookstore"
+                    name="PreferredAuthor/value"
+                    operator="equals"
+                    value="michael-connelly"/>
+            </andpar>
+        </traits>
+        <image
+            jcr:lastModified="{Date}2014-03-28T10:08:50.940-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

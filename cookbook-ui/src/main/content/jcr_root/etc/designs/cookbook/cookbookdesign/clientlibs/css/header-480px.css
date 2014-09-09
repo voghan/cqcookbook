@@ -1,0 +1,21 @@
+@media (max-width: 480px) {
+	
+	.cbheader .topnav li {
+		/*Purple/Blue */
+		background: #DE0CE8;
+		display: flex;
+		list-style-type: none;
+		width: 75%;
+		padding: 5px;
+		border:1px solid #363d4c;
+	}
+	
+	.cbheader .toolbar li {
+		display: inline;
+		list-style-type: none;
+		padding-left: 5px;
+		padding-right: 5px;
+	    font-size: 0.75em;
+		float: right
+	}
+}
