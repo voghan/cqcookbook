@@ -11,13 +11,13 @@
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         cq:tags="[cookbook:authors/j-r-r-tolkien,cookbook:genres/fantasy,cookbook:genres/fiction]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="J. J. R. Tolken"
         jcr:uuid="bbc6ee62-a3a7-4081-bdfb-a5dfbc0567aa"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <image
             jcr:lastModified="{Date}2014-01-27T14:48:36.446-06:00"
             jcr:lastModifiedBy="admin"

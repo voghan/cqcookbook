@@ -18,6 +18,9 @@ public class ContentPage extends BaseAdaptable {
     private String pageTitle;
     private String description = "";
     private String imagePath;
+    private String contentTitle;
+    private String contentBody;
+    private String contentLinkText;
 
     public ContentPage(Object o) {
         if (o instanceof Resource) {
@@ -67,6 +70,18 @@ public class ContentPage extends BaseAdaptable {
         return description;
     }
 
+    public String getContentTitle() {
+        return contentTitle;
+    }
+
+    public String getContentBody() {
+        return contentBody;
+    }
+
+    public String getContentLinkText() {
+        return contentLinkText;
+    }
+
     private void buildPage() {
         this.path = getResource().getPath();
         this.title = getPropertyAsString("jcr:content/jcr:title");
@@ -75,6 +90,11 @@ public class ContentPage extends BaseAdaptable {
         String imagePath = getPropertyAsString("jcr:content/image/fileReference");
         this.imagePath = ImageHelper.getImagePath(imagePath, getResource().getResourceResolver());
         this.redirect = getPropertyAsString("jcr:content/redirectTarget");
+
+        this.contentTitle = getPropertyAsString("jcr:content/jcr:content_title");
+        this.contentBody = getPropertyAsString("jcr:content/jcr:content_body");
+        this.contentLinkText = getPropertyAsString("jcr:content/jcr:content_link_text");
+
 
         if (redirect != null && redirect.trim().length() > 0) {
             this.url = redirect;

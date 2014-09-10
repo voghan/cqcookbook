@@ -5,11 +5,11 @@
         cq:designPath="/etc/designs/cookbook/cookbookdesign"
         cq:lastModified="{Date}2014-02-12T15:22:44.134-06:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         cq:toolbars="[footer]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Site Map"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">

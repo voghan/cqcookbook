@@ -6,10 +6,10 @@
         cq:lastModified="{Date}2013-10-20T23:13:33.183-05:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:authors,cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Storm of Swords"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">

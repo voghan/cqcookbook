@@ -7,14 +7,14 @@
         cq:designPath="/etc/designs/cookbook/cookbookdesign"
         cq:lastModified="{Date}2014-03-12T12:40:50.741-05:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         cq:toolbars="[footer]"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Terms of Use"
         jcr:uuid="6f55547b-d2de-458e-bbdb-39e0d024412b"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <image
             jcr:lastModified="{Date}2014-02-12T13:46:40.621-06:00"
             jcr:lastModifiedBy="admin"

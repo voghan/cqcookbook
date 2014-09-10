@@ -41,18 +41,14 @@
 
   ==============================================================================
 
---%><%@page session="true" import="com.day.cq.i18n.I18n,
-        com.day.cq.wcm.commons.WCMUtils,
+--%><%@page session="false" import="com.day.cq.wcm.commons.WCMUtils,
         org.apache.sling.api.resource.Resource,
-		org.apache.sling.api.resource.ValueMap,
-		java.util.Locale"
-
+        org.apache.sling.api.resource.ValueMap"
         %><%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %><%
 %><%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %><%
 %><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%
 %><%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><%
 %><%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%
-%><cq:defineObjects /><cq:setContentBundle/>
-<%
-
 %>
+<cq:defineObjects />
+<cq:setContentBundle/>

@@ -8,7 +8,7 @@
         jcr:primaryType="nt:unstructured"
         jcr:title="Cookbook Design"
         sling:resourceType="wcm/core/components/designer">
-        <cookbook_home jcr:primaryType="nt:unstructured">
+        <cookbook_wide jcr:primaryType="nt:unstructured">
             <par
                 jcr:lastModified="{Date}2014-03-27T10:21:59.026-05:00"
                 jcr:lastModifiedBy="admin"
@@ -49,7 +49,7 @@
                 imageReference="/content/dam/cookbook/corp/digi_logo.png"
                 imageRotate="0"
                 maxWidth="165"/>
-        </cookbook_home>
+        </cookbook_wide>
         <cookbook_store jcr:primaryType="nt:unstructured">
             <toolbar_header
                 jcr:lastModified="{Date}2014-02-13T15:48:57.963-06:00"

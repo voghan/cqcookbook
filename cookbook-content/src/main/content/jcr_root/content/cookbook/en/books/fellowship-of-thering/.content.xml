@@ -6,10 +6,10 @@
         cq:lastModified="{Date}2013-10-23T16:18:07.895-05:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:genres/fantasy,cookbook:genres/fiction,cookbook:authors/j-r-r-tolkien]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Fellowship of the Ring"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">

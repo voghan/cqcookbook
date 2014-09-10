@@ -16,12 +16,6 @@
   ==============================================================================
 
 --%><%@include file="/apps/cookbook/global.jsp"%>
-<%@ page import="org.apache.commons.lang3.StringEscapeUtils,
-				   org.apache.commons.lang3.StringUtils" %>
-<%  Locale pageLocale = currentPage.getLanguage(false);%>
-<script>
-    var jsPageLocale="<%=pageLocale.toString()%>";
-</script>
 
 <cq:includeClientLib css="cq.cookbook"/>
 <cq:includeClientLib js="cq.cookbook"/>

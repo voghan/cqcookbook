@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Panel"
-    title="Related Links">
+    title="Teaser Content">
     <items jcr:primaryType="cq:WidgetCollection">
         <basic
             jcr:primaryType="cq:Widget"
@@ -9,42 +9,42 @@
             collapsible="{Boolean}false"
             xtype="dialogfieldset">
             <items jcr:primaryType="cq:WidgetCollection">
-                <widget_title
+                <teaser_title
                     jcr:primaryType="cq:Widget"
-                    fieldLabel="Widget Title"
-                    name="./jcr:related_title"
+                    fieldDescription="Title for content."
+                    fieldLabel="Title"
+                    name="./jcr:cta_title"
                     xtype="textfield"/>
-                <width
+                <teaser_content
                     jcr:primaryType="cq:Widget"
-                    fieldLabel="Width"
-                    name="./width"
-                    type="select"
-                    xtype="selection">
-                    <options jcr:primaryType="cq:WidgetCollection">
-                        <small
+                    fieldDescription="Content displayed inside component."
+                    fieldLabel="Content"
+                    name="./jcr:cta_content"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <format
                             jcr:primaryType="nt:unstructured"
-                            text="1"
-                            value="1"/>
-                        <medium
+                            features="*"/>
+                        <justify
                             jcr:primaryType="nt:unstructured"
-                            text="2"
-                            value="2"/>
-                        <large
+                            features="*"/>
+                        <spellcheck
                             jcr:primaryType="nt:unstructured"
-                            text="3"
-                            value="3"/>
-                    </options>
-                </width>
-                <external_link
+                            features="*"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </rtePlugins>
+                </teaser_content>
+                <teaser_link
                     jcr:primaryType="cq:Widget"
-                    fieldLabel="URL Link"
-                    name="./jcr:external_link"
-                    xtype="pathfield"/>
-                <image
-                    jcr:primaryType="cq:Widget"
-                    fieldLabel="Image"
-                    name="./jcr:image"
-                    xtype="pathfield"/>
+                    fieldDescription="Link label displayed inside content."
+                    fieldLabel="Link Text"
+                    name="./jcr:cta_link_text"
+                    xtype="textfield"/>
             </items>
         </basic>
     </items>

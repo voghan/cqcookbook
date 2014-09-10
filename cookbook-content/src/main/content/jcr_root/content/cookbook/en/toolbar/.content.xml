@@ -5,10 +5,10 @@
         cq:designPath="/etc/designs/cookbook/cookbookdesign"
         cq:lastModified="{Date}2014-02-12T13:58:24.459-06:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:primaryType="cq:PageContent"
         jcr:title="toolbar"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide"
         hideInNav="true">
         <image
             jcr:lastModified="{Date}2014-02-04T11:38:48.322-06:00"

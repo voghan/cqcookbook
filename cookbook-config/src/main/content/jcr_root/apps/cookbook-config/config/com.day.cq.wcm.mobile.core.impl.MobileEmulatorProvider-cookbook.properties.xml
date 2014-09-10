@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
-          mobile.resourceTypes="[/apps/cookbook/components/pages/page,/apps/cookbook/components/pages/cookbook_home,/apps/cookbook/components/pages/cookbook_store]"  />
+          mobile.resourceTypes="[/apps/cookbook/components/pages/page,/apps/cookbook/components/pages/cookbook_wide,/apps/cookbook/components/pages/cookbook_store]"  />

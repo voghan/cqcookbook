@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:TabPanel"
+    activeTab="{Long}0"
+    helpPath="en/cq/current/wcm/default_components.html#Text Image"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Rich Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <isRichTextFlag
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./textIsRich"
+                    value="true"
+                    xtype="hidden"/>
+                <text
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Content"
+                    name="./contentDescription"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured">
+                        <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                            <formats jcr:primaryType="cq:WidgetCollection">
+                                <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="heading1"
+                                        tag="h1"/>
+                                <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="heading2"
+                                        tag="h2"/>
+                                <p
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                <strong
+                                        jcr:primaryType="nt:unstructured"
+                                        description="strong"
+                                        tag="strong"/>
+                            </formats>
+                        </paraformat>
+                        <format
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <justify
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <spellcheck
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <subsuperscript
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                        <misctools
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
+                            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                <chars jcr:primaryType="nt:unstructured">
+                                    <trade
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="™"/>
+                                    <copy
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="©"/>
+                                    <redistered
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="®"/>
+                                    <dagger
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="†"/>
+                                </chars>
+                            </specialCharsConfig>
+                        </misctools>
+                        <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                            <styles jcr:primaryType="cq:WidgetCollection">
+                                <small
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="blurb__content--small"
+                                        text="small text"/>
+                                <large
+                                        jcr:primaryType="nt:unstructured"
+                                        cssName="blurb__content--large"
+                                        text="large text"/>
+                            </styles>
+                        </styles>
+                    </rtePlugins>
+                </text>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

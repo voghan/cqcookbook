@@ -10,13 +10,13 @@
         cq:lastReplicated="{Date}2013-10-28T14:09:34.753-04:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="en"
         jcr:uuid="cb802348-9413-4ecc-b193-83eba3120f58"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home"
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide"
         redirectTarget="/content/cookbook/en/home">
         <image
             jcr:lastModified="{Date}2014-02-12T13:30:45.137-06:00"

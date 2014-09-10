@@ -8,7 +8,7 @@
         cq:lastModified="{Date}2014-03-05T12:18:15.821-06:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:authors/j-r-r-tolkien]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         cq:toolbars="[header]"
         jcr:created="{Date}2013-10-21T11:30:04.112-05:00"
         jcr:createdBy="admin"
@@ -17,7 +17,7 @@
         jcr:primaryType="nt:unstructured"
         jcr:title="Search"
         jcr:uuid="59078840-04e3-46dc-ba5f-c83b8ac7e900"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">

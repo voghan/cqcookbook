@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Teasers"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <contentPage
+            jcr:primaryType="cq:Widget"
+            title="Targeted Content"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <topLevelPage
+                    jcr:primaryType="nt:unstructured"
+                    fieldDescription="Target page for call to action."
+                    fieldLabel="Target page"
+                    name="./targetPage"
+                    xtype="pathfield"/>
+            </items>
+        </contentPage>
+    </items>
+</jcr:root>

@@ -11,13 +11,13 @@
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         cq:tags="[cookbook:authors/michael-connelly,cookbook:genres/fiction,cookbook:genres/crime]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Michael Connelly"
         jcr:uuid="68882caa-c8fd-4f74-8c83-0ba7e3fbe104"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <image
             jcr:lastModified="{Date}2014-02-25T10:32:07.463-06:00"
             jcr:lastModifiedBy="admin"

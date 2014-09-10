@@ -3,13 +3,14 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/cookbook/cookbookdesign"
-        cq:lastModified="{Date}2014-03-05T12:14:11.386-06:00"
+        cq:lastModified="{Date}2014-09-10T10:56:10.634-05:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         cq:toolbars="[header]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Home"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide"
+        redirectTarget="/content/cookbook/en/home">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">

@@ -6,10 +6,10 @@
         cq:lastModified="{Date}2013-10-21T11:08:15.549-05:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:authors/michael-connelly,cookbook:genres/crime,cookbook:genres/fiction]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:primaryType="cq:PageContent"
         jcr:title="The Fifth Witness"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <image
             jcr:lastModified="{Date}2013-10-21T09:15:27.239-05:00"
             jcr:lastModifiedBy="admin"

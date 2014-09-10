@@ -3,6 +3,6 @@
     cq:isContainer="{Boolean}false"
     jcr:description="Cookbook Home Page Component"
     jcr:primaryType="cq:Component"
-    jcr:title="Cookbook Home Page Component"
+    jcr:title="Cookbook Wide Page Component"
     sling:resourceSuperType="/apps/cookbook/components/pages/page"
     componentGroup=".hidden"/>

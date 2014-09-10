@@ -8,13 +8,13 @@
         cq:lastModified="{Date}2014-02-25T10:50:44.918-06:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:authors/george-r-r-martin,cookbook:genres/fantasy,cookbook:genres/fiction]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Clash of Kings"
         jcr:uuid="e3343383-b53f-49fe-9e9f-7141fbcfad07"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">

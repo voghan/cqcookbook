@@ -6,10 +6,10 @@
         cq:lastModified="{Date}2014-01-27T15:11:48.552-06:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:genres/fantasy,cookbook:genres/fiction,cookbook:genres/non-fiction,cookbook:authors/stephen-king]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Stephen King"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <image
             jcr:lastModified="{Date}2014-01-27T15:11:48.548-06:00"
             jcr:lastModifiedBy="admin"

@@ -6,10 +6,10 @@
         cq:lastModified="{Date}2014-02-25T15:19:28.083-06:00"
         cq:lastModifiedBy="admin"
         cq:tags="[cookbook:authors,cookbook:genres,cookbook:authors/michael-connelly,cookbook:genres/crime,cookbook:genres/fiction]"
-        cq:template="/apps/cookbook/templates/cookbook_home"
+        cq:template="/apps/cookbook/templates/cookbook_wide"
         jcr:primaryType="cq:PageContent"
         jcr:title="The Reversal"
-        sling:resourceType="/apps/cookbook/components/pages/cookbook_home">
+        sling:resourceType="/apps/cookbook/components/pages/cookbook_wide">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
