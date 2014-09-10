@@ -13,7 +13,7 @@ mvn clean install -P autoInstallDependencies
 #Run third to install content
 #Perform build of content and deploy to server
 # run at cqcookbook/cookbook-content
-mvm clean install -P autoInstallContent
+mvn clean install -P autoInstallContent
 
 #Run last to install bundle and UI code
 #Perform build and deploy code from UI and bundle modules
