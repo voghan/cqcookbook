@@ -8,22 +8,21 @@ import org.apache.sling.api.resource.Resource;
  * Date: 10/6/13
  */
 public class Book extends BaseAdaptable {
-	private static final long serialVersionUID = -3493414463695518701L;
-	public transient Resource baseResource = null;
-	
-	private String title;
+    private static final long serialVersionUID = -3493414463695518701L;
+    public transient Resource baseResource = null;
+
+    private String title;
     private String author;
     private String publisher;
     private String isbn;
     private String path;
     private String year;
-    
+
     public Book(Object o) {
         if (o instanceof Resource) {
-            this.baseResource = (Resource)o;
-        }
-        else if (o instanceof Page) {
-            Resource r = ((Page)o).adaptTo(Resource.class);
+            this.baseResource = (Resource) o;
+        } else if (o instanceof Page) {
+            Resource r = ((Page) o).adaptTo(Resource.class);
             if (r != null) {
                 this.baseResource = r;
             }
@@ -67,34 +66,33 @@ public class Book extends BaseAdaptable {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
-    
-	public String getYear() {
-		return year;
-	}
 
-	public void setYear(String year) {
-		this.year = year;
-	}
+    public String getYear() {
+        return year;
+    }
 
-	public String getPath() {
-		return path;
-	}
+    public void setYear(String year) {
+        this.year = year;
+    }
 
-	public void setPath(String path) {
-		this.path = path;
-	}
+    public String getPath() {
+        return path;
+    }
 
-	@Override
-	Resource getResource() {
-		return baseResource;
-	}
-	
-	private void buildBook() {
-		this.path = getResource().getPath();
-		this.title = getPropertyAsString("jcr:content/par/bookdetail/title");
-	    this.author = getPropertyAsString("jcr:content/par/bookdetail/author");
-	    this.publisher = getPropertyAsString("jcr:content/par/bookdetail/publisher");
-	    this.isbn = getPropertyAsString("jcr:content/par/bookdetail/isbn");
-		this.year = getPropertyAsString("jcr:content/par/bookdetail/year");
-	}
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    @Override Resource getResource() {
+        return baseResource;
+    }
+
+    private void buildBook() {
+        this.path = getResource().getPath();
+        this.title = getPropertyAsString("jcr:content/par/bookdetail/title");
+        this.author = getPropertyAsString("jcr:content/par/bookdetail/author");
+        this.publisher = getPropertyAsString("jcr:content/par/bookdetail/publisher");
+        this.isbn = getPropertyAsString("jcr:content/par/bookdetail/isbn");
+        this.year = getPropertyAsString("jcr:content/par/bookdetail/year");
+    }
 }

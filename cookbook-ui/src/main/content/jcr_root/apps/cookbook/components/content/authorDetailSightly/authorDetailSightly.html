@@ -1,0 +1,18 @@
+
+<div class="authorDetails" data-sly-use.author="com.cookbook.cq.components.AuthorDetails">
+
+    <h2>${author.title}</h2>
+
+    <img src="${author.imagePath}" alt="authorImage" />
+
+    <h3>About the author:</h3>
+    <p data-sly-text="${author.aboutAuthor @ context='html'}"></p>
+
+    <p data-sly-text="${author.aboutAuthor}"></p>
+
+    <h3>Books</h3>
+
+    <ul data-sly-list="${author.books}">
+        <li><p><a href="${item.path}.html">${item.title}</a></p></li>
+    </ul>
+</div>

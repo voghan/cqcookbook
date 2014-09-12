@@ -24,25 +24,25 @@
                     xtype="richtext">
                     <rtePlugins jcr:primaryType="nt:unstructured">
                         <paraformat
-                                jcr:primaryType="nt:unstructured"
-                                features="*">
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
                             <formats jcr:primaryType="cq:WidgetCollection">
                                 <h1
-                                        jcr:primaryType="nt:unstructured"
-                                        description="heading1"
-                                        tag="h1"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    description="heading1"
+                                    tag="h1"/>
                                 <h2
-                                        jcr:primaryType="nt:unstructured"
-                                        description="heading2"
-                                        tag="h2"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    description="heading2"
+                                    tag="h2"/>
                                 <p
-                                        jcr:primaryType="nt:unstructured"
-                                        description="Paragraph"
-                                        tag="p"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    description="Paragraph"
+                                    tag="p"/>
                                 <strong
-                                        jcr:primaryType="nt:unstructured"
-                                        description="strong"
-                                        tag="strong"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    description="strong"
+                                    tag="strong"/>
                             </formats>
                         </paraformat>
                         <format
@@ -63,14 +63,14 @@
                             <specialCharsConfig jcr:primaryType="nt:unstructured">
                                 <chars jcr:primaryType="nt:unstructured">
                                     <trade
-                                            jcr:primaryType="nt:unstructured"
-                                            entity="™"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="™"/>
                                     <copy
-                                            jcr:primaryType="nt:unstructured"
-                                            entity="©"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="©"/>
                                     <redistered
-                                            jcr:primaryType="nt:unstructured"
-                                            entity="®"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        entity="®"/>
                                     <dagger
                                         jcr:primaryType="nt:unstructured"
                                         entity="†"/>
@@ -78,22 +78,66 @@
                             </specialCharsConfig>
                         </misctools>
                         <styles
-                                jcr:primaryType="nt:unstructured"
-                                features="*">
+                            jcr:primaryType="nt:unstructured"
+                            features="*">
                             <styles jcr:primaryType="cq:WidgetCollection">
                                 <small
-                                        jcr:primaryType="nt:unstructured"
-                                        cssName="blurb__content--small"
-                                        text="small text"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    cssName="blurb__content--small"
+                                    text="small text"/>
                                 <large
-                                        jcr:primaryType="nt:unstructured"
-                                        cssName="blurb__content--large"
-                                        text="large text"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    cssName="blurb__content--large"
+                                    text="large text"/>
                             </styles>
                         </styles>
                     </rtePlugins>
                 </text>
+                <style
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Style"
+                    name="./contentStyle"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <Defalut
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value=""/>
+                        <Teal
+                            jcr:primaryType="nt:unstructured"
+                            text="Light Gray"
+                            value="column-feature--lightgray"/>
+                    </options>
+                </style>
             </items>
         </tab1>
+        <padding
+            jcr:primaryType="cq:Widget"
+            id="setup"
+            title="Padding"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <spacer
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="on"
+                    fieldLabel="Padding"
+                    name="./spacer"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <On
+                            jcr:primaryType="nt:unstructured"
+                            text="On"
+                            value="on"/>
+                        <Off
+                            jcr:primaryType="nt:unstructured"
+                            text="Off"
+                            value="off"/>
+                    </options>
+                </spacer>
+            </items>
+        </padding>
     </items>
 </jcr:root>

@@ -69,34 +69,43 @@
 
     <dependencies>
  <!-- Adobe CQ, all provided by CQ -->
-            <dependency>
-                <groupId>com.day.cq.wcm</groupId>
-                <artifactId>cq-wcm-api</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq</groupId>
-                <artifactId>cq-commons</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq</groupId>
-                <artifactId>cq-mailer</artifactId>                
-            </dependency>
-            <dependency>
-            	<groupId>com.day.cq.dam</groupId>
-				<artifactId>cq-dam-commons</artifactId>
-            </dependency>
-            <dependency>
-            	<groupId>com.day.cq.dam</groupId>
-				<artifactId>cq-dam-api</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq</groupId>
-                <artifactId>cq-tagging</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.day.cq</groupId>
-                <artifactId>cq-search</artifactId>
-            </dependency>
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-mailer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.dam</groupId>
+            <artifactId>cq-dam-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.dam</groupId>
+            <artifactId>cq-dam-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-tagging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-search</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.sightly</groupId>
+            <artifactId>cq-wcm-sightly-extension</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>aem-api</artifactId>
+        </dependency>
 
         <!-- Apache Commons -->
         <dependency>
