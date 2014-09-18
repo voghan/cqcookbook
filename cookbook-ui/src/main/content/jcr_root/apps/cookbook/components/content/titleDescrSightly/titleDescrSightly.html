@@ -1,0 +1,10 @@
+<section class="component-name" data-sly-use.component="component.js">
+    <h1>${component.title}</h1>
+    <p>${component.description}</p>
+
+    <p data-sly-text="${component.description}"></p>
+
+    <p data-sly-test="${component.description}">
+        ${component.description}
+    </p>
+</section>

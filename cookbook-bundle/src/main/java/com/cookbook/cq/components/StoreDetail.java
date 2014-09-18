@@ -13,11 +13,12 @@ public class StoreDetail extends WCMUse {
 
     private Location location;
 
-    @Override public void activate() throws Exception {
+    @Override
+    public void activate() throws Exception {
 
-        StoreLocatorService service = getSlingScriptHelper().getService(StoreLocatorService.class);
+        StoreLocatorService service = super.getSlingScriptHelper().getService(StoreLocatorService.class);
 
-        Tag[] tags = getCurrentPage().getTags();
+        Tag[] tags = super.getCurrentPage().getTags();
 
         Tag tag = null;
         for (int i =0; i < tags.length; i++) {

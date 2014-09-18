@@ -20,15 +20,7 @@ public abstract class AbstractServlet extends SlingAllMethodsServlet {
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
         throws IOException {
 
-        response.setHeader("Dispatcher", "no-cache");
-
-        // Set standard HTTP/1.1 no-cache headers.
-        response.setHeader("Cache-Control", "private, no-store, no-cache, must-revalidate");
-
-        // Set standard HTTP/1.0 no-cache header.
-        response.setHeader("Pragma", "no-cache");
-
-        response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+        handleCache(response);
 
         performRequest(request, response);
     }
@@ -37,17 +29,16 @@ public abstract class AbstractServlet extends SlingAllMethodsServlet {
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
         throws ServletException, IOException {
 
-        response.setHeader("Dispatcher", "no-cache");
-
-        // Set standard HTTP/1.1 no-cache headers.
-        response.setHeader("Cache-Control", "private, no-store, no-cache, must-revalidate");
-
-        // Set standard HTTP/1.0 no-cache header.
-        response.setHeader("Pragma", "no-cache");
-
-        response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
+        handleCache(response);
 
         performRequest(request, response);
+    }
+
+    private void handleCache(SlingHttpServletResponse response) {
+        response.setHeader("Dispatcher", "no-cache");
+        response.setHeader("Cache-Control", "private, no-store, no-cache, must-revalidate");
+        response.setHeader("Pragma", "no-cache");
+        response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
     }
 
 
