@@ -1,0 +1,25 @@
+Update start to use JAAS
+
+CQ_USE_JAAS='true'
+CQ_JAAS_CONFIG='/Users/bvaughn/adobe/cq5_6_1/author/crx-quickstart/conf/jaas.conf'
+
+Edit jaas.conf file
+com.day.crx {
+  com.cookbook.authentication.SampleLoginModule sufficient;
+  com.day.crx.core.CRXLoginModule sufficient;
+};
+
+
+Edit repository.xml
+
+comment out LoginModule
+
+add :
+  <SecurityManager class="com.day.crx.core.CRXSecurityManager">
+          <WorkspaceAccessManager class="org.apache.jackrabbit.core.security.simple.SimpleWorkspaceAccessManager"/>
+          <UserManager class="com.day.crx.core.CRXUserManagerImpl">
+          <param name="usersPath" value="/home/users"/>
+          <param name="groupsPath" value="/home/groups"/>
+          <param name="defaultDepth" value="1"/>
+          </UserManager>
+  </SecurityManager>

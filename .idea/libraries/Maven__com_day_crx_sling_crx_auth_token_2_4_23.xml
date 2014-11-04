@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.day.crx.sling:crx-auth-token:2.4.23">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/day/crx/sling/crx-auth-token/2.4.23/crx-auth-token-2.4.23.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/day/crx/sling/crx-auth-token/2.4.23/crx-auth-token-2.4.23-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/day/crx/sling/crx-auth-token/2.4.23/crx-auth-token-2.4.23-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

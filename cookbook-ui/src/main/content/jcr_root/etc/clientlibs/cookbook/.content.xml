@@ -6,5 +6,5 @@
     jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[cq.cookbook]"
-    dependencies="[cq.jquery,cq.foundation]"
+    dependencies="[cq.jquery,cq.foundation,personalization]"
     embed="[cq.cookbook.components]"/>
