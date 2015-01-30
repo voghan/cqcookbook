@@ -20,7 +20,6 @@ import org.apache.sling.api.adapter.AdapterFactory;
 public class ContentPageAdapterFactory implements AdapterFactory {
 
     @SuppressWarnings("unchecked")
-    @Override
     public <AdapterType> AdapterType getAdapter(Object adaptable, Class<AdapterType> type) {
         ContentPage page = new ContentPage(adaptable);
         return (AdapterType) page;

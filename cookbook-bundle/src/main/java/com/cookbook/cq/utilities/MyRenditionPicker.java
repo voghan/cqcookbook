@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class MyRenditionPicker implements RenditionPicker {
 
-    @Override public Rendition getRendition(Asset asset) {
+    public Rendition getRendition(Asset asset) {
         List<Rendition> renditions = asset.getRenditions();
         for (Rendition rendition : renditions) {
             if (rendition.getName().startsWith("cq5dam.web.")) {

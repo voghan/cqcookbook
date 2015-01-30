@@ -6,9 +6,6 @@ import com.day.cq.wcm.api.PageManager;
 import com.day.cq.wcm.api.designer.Design;
 import com.day.cq.wcm.api.designer.Designer;
 import org.apache.sling.api.resource.ResourceResolver;
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
-import org.osgi.framework.ServiceReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -66,10 +63,7 @@ public class PageHelper {
     }
 
     public static Page getApplicationPath(Page currentPage) {
-        //Boilerplate code to get a service from a pojo
-        BundleContext bundleContext = FrameworkUtil.getBundle(Activator.class).getBundleContext();
-        ServiceReference factoryRef = bundleContext.getServiceReference(AemPropertyService.class.getName());
-        AemPropertyService propertyService = (AemPropertyService) bundleContext.getService(factoryRef);
+        AemPropertyService propertyService = (AemPropertyService) ServiceFactory.getService(AemPropertyService.class.getName());
 
         String appDepth = propertyService.getProperty("com.ams.corp.aem.common","application.depth");
 

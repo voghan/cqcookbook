@@ -31,7 +31,7 @@ public class HelloWorkflow implements WorkflowProcess {
 
     public static final String MODEL = "/etc/workflow/models/CookbookWorkflow/jcr:content/model";
 
-    @Override public void execute(WorkItem workItem, WorkflowSession workflowSession,
+    public void execute(WorkItem workItem, WorkflowSession workflowSession,
         MetaDataMap metaDataMap) throws WorkflowException {
 
         try {

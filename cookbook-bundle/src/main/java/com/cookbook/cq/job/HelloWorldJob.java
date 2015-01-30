@@ -48,7 +48,7 @@ public class HelloWorldJob implements Runnable {
     @Reference
     private ConfigurationAdmin configurationAdmin;
 
-    @Override public void run() {
+    public void run() {
 
         try {
 

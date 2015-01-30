@@ -43,7 +43,6 @@ public class ScheduleServiceImpl implements ScheduleService, Runnable {
     @Reference
     private WorkflowService workflowService;
 
-    @Override
     public void run() {
 
         log.info("*********************** I'm a sample job that runs every five minutes");

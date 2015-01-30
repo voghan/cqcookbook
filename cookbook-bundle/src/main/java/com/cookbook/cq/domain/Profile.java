@@ -3,7 +3,8 @@ package com.cookbook.cq.domain;
 public class Profile extends Base {
 
 	private static final long serialVersionUID = 6752879673162619635L;
-	
+    public static final String  SESSION_KEY = "SESSION_KEY";
+
 	private String gender;
 	private String age;
 	private String preferredGenre;
@@ -26,6 +27,7 @@ public class Profile extends Base {
 	public void setPreferredGenre(String preferredGenre) {
 		this.preferredGenre = preferredGenre;
 	}
-	
-	
+
+
+
 }
