@@ -12,14 +12,14 @@ com.day.crx {
 
 Edit repository.xml
 
-comment out LoginModule
+                    comment out LoginModule
 
-add :
-  <SecurityManager class="com.day.crx.core.CRXSecurityManager">
-          <WorkspaceAccessManager class="org.apache.jackrabbit.core.security.simple.SimpleWorkspaceAccessManager"/>
-          <UserManager class="com.day.crx.core.CRXUserManagerImpl">
-          <param name="usersPath" value="/home/users"/>
-          <param name="groupsPath" value="/home/groups"/>
-          <param name="defaultDepth" value="1"/>
-          </UserManager>
-  </SecurityManager>
+                    add :
+                      <SecurityManager class="com.day.crx.core.CRXSecurityManager">
+                              <WorkspaceAccessManager class="org.apache.jackrabbit.core.security.simple.SimpleWorkspaceAccessManager"/>
+                              <UserManager class="com.day.crx.core.CRXUserManagerImpl">
+                              <param name="usersPath" value="/home/users"/>
+                              <param name="groupsPath" value="/home/groups"/>
+                              <param name="defaultDepth" value="1"/>
+                              </UserManager>
+                      </SecurityManager>

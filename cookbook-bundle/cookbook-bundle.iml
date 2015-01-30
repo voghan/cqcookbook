@@ -4,7 +4,6 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="cookbook-bundle-1.0-SNAPSHOT.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="com.cookbook.cq.utilities.Activator" bundleSymbolicName="cookbook.cookbook-bundle" bundleVersion="1.0.0.SNAPSHOT" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
-          <property key="Bundle-Description" value="Maven Multimodule project for Cookbook" />
           <property key="Import-Package" value="org.aopalliance.aop,org.springframework.aop,org.springframework.aop.framework,*" />
           <property key="Bundle-Name" value="Cookbook Bundle" />
           <property key="Include-Resource" value="log4j.properties=$MODULE_DIR$/src/main/resources/log4j.properties,META-INF/cookbook.tld=$MODULE_DIR$/src/main/resources/META-INF/cookbook.tld,META-INF/spring/app-context-osgi.xml=$MODULE_DIR$/src/main/resources/META-INF/spring/app-context-osgi.xml,META-INF/spring/app-context-ws.xml=$MODULE_DIR$/src/main/resources/META-INF/spring/app-context-ws.xml,META-INF/spring/app-context.xml=$MODULE_DIR$/src/main/resources/META-INF/spring/app-context.xml" />
