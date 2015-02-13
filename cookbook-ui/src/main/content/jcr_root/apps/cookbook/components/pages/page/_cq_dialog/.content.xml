@@ -108,6 +108,16 @@
                                                 sling:resourceType="granite/ui/components/foundation/form/hidden"
                                                 name="./hideInNav@Delete"
                                                 value="true"/>
+                                            <disableCache
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                name="./disableCache"
+                                                value="true"/>
+                                            <deletedisableCache
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                name="./disableCache@Delete"
+                                                value="true"/>
                                             <charset
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/hidden"

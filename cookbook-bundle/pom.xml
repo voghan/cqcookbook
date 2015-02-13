@@ -283,7 +283,23 @@
 	          <groupId>org.apache.httpcomponents</groupId>
 	          <artifactId>com.springsource.org.apache.httpcomponents.httpcore</artifactId>
 	      </dependency>
+
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>fontbox</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>jempbox</artifactId>
+        </dependency>
+
 	    </dependencies>
+
+
 
     <profiles>
         <profile>

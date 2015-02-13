@@ -32,6 +32,12 @@
     
     pageContext.setAttribute("wcmmode", WCMMode.fromRequest(slingRequest));
 	pageContext.setAttribute("wcmmodeDisabled", WCMMode.DISABLED);
+
+    boolean disableCache = properties.get("disableCache", false);
+
+    if (disableCache) {
+        response.setHeader("Dispatcher", "no-cache");
+    }
 %>
 <head>
     <meta charset="utf-8"/>
