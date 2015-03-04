@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- ====================================================================== -->
+    <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
+    <!-- ====================================================================== -->
+
+    <groupId>com.cookbook.cq</groupId>
+    <artifactId>cookbook</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Cookbook Project</name>
+    <description>Maven Multimodule project for Cookbook</description>
+
+    <!-- ====================================================================== -->
+    <!-- P R O P E R T I E S -->
+    <!-- ====================================================================== -->
+    <properties>
+        <crx.host>localhost</crx.host>
+        <crx.port>4502</crx.port>
+        <crx.user>admin</crx.user>
+        <crx.password>admin</crx.password>
+        <java.version>1.6</java.version>
+        <skipTests>true</skipTests>
+
+        <appsPath>/apps/cookbook</appsPath>
+        <externalDependencyScope>compile</externalDependencyScope>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.16</version>
+                    <configuration>
+                        <skipTests>${skipTests}</skipTests>
+                    </configuration>
+				    <dependencies>
+				      <dependency>
+				        <groupId>org.apache.maven.surefire</groupId>
+				        <artifactId>surefire-junit47</artifactId>
+				        <version>2.16</version>
+				      </dependency>
+				    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-scr-plugin</artifactId>
+                    <version>1.7.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>2.3.7</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.sling</groupId>
+                    <artifactId>maven-sling-plugin</artifactId>
+                    <version>2.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.day.jcr.vault</groupId>
+                    <artifactId>content-package-maven-plugin</artifactId>
+                    <version>0.0.20</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.4</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+               <groupId>org.eclipse.m2e</groupId>
+               <artifactId>lifecycle-mapping</artifactId>
+               <version>1.0.0</version>
+               <configuration>
+                  <lifecycleMappingMetadata>
+                     <pluginExecutions>
+                        <pluginExecution>
+                           <pluginExecutionFilter>
+                              <groupId>
+                                 org.apache.felix
+                              </groupId>
+                              <artifactId>
+                                 maven-scr-plugin
+                              </artifactId>
+                              <versionRange>
+                                 [1.7.4,)
+                              </versionRange>
+                              <goals>                 -demo
+                                 <goal>scr</goal>
+                              </goals>
+                           </pluginExecutionFilter>
+                           <action>
+                              <ignore />
+                           </action>
+                        </pluginExecution>
+                        <pluginExecution>
+                           <pluginExecutionFilter>
+                              <groupId>org.codehaus.mojo</groupId>
+                              <artifactId>aspectj-maven-plugin</artifactId>
+                              <versionRange>[1.0,)</versionRange>
+                              <goals>
+                                 <goal>test-compile</goal>
+                                 <goal>compile</goal>
+                              </goals>
+                           </pluginExecutionFilter>
+                           <action>
+                              <execute />
+                           </action>
+                        </pluginExecution>
+                     </pluginExecutions>
+                  </lifecycleMappingMetadata>
+               </configuration>
+            </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <!-- ============================================================================ -->
+    <!-- READ CAREFULLY BEFORE ADDING DEPENDENCIES: If the dependency is 
+        not provided by AEM then please 1) use <scope>${externalDependencyScope}</scope> 
+        in the dependency definition and 2) also include the dependency in both the 
+        cookbook-bundle and cookbook-config dependency lists. If it is an 
+        internal dependency, then use <scope>provided</scope>. -->
+    <!-- ============================================================================ -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Adobe CQ, all provided by CQ -->
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.core</artifactId>
+                <version>4.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.compendium</artifactId>
+                <version>4.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.6.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>biz.aQute</groupId>
+                <artifactId>bndlib</artifactId>
+                <version>1.43.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.5.10</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.jcr</groupId>
+                <artifactId>jcr</artifactId>
+                <version>2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.api</artifactId>
+                <version>2.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.jcr.api</artifactId>
+                <version>2.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>aem-api</artifactId>
+                <version>6.0.0.1</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Updated dependencies-->
+            <dependency>
+                <groupId>com.day.commons.osgi.wrapper</groupId>
+                <artifactId>com.day.commons.osgi.wrapper.commons-email</artifactId>
+                <version>1.2.0-0002</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.5.0-b01</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.commons.osgi.wrapper</groupId>
+                <artifactId>com.day.commons.osgi.wrapper.commons-lang2</artifactId>
+                <version>2.5-0001</version>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>jackrabbit-api</artifactId>
+                <version>2.6.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>jackrabbit-jcr-commons</artifactId>
+                <version>2.6.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>jackrabbit-core</artifactId>
+                <version>2.5.2</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.crx.sling</groupId>
+                <artifactId>crx-auth-token</artifactId>
+                <version>2.4.23</version>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <!-- Apache Commons -->
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.0.1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>com.springsource.org.apache.commons.codec</artifactId>
+                <version>1.6.0</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+
+            <!-- Apache Http Components -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>com.springsource.org.apache.httpcomponents.httpclient</artifactId>
+                <version>4.2.1</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>com.springsource.org.apache.httpcomponents.httpcore</artifactId>
+                <version>4.2.1</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+
+            <!-- Felix -->
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.6.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Gemini -->
+            <dependency>
+                <groupId>org.eclipse.gemini</groupId>
+                <artifactId>org.eclipse.gemini.blueprint.core</artifactId>
+                <version>1.0.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.gemini</groupId>
+                <artifactId>org.eclipse.gemini.blueprint.extender</artifactId>
+                <version>1.0.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.gemini</groupId>
+                <artifactId>org.eclipse.gemini.blueprint.io</artifactId>
+                <version>1.0.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+
+            <!-- Gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.2.3</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.geocoder-java</groupId>
+                <artifactId>geocoder-java</artifactId>
+                <version>0.16</version>
+            </dependency>
+
+            <!-- Java Messaging System -->
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>com.springsource.javax.jms</artifactId>
+                <version>1.1.0</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+
+            <!-- Java Persistance API -->
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>com.springsource.javax.persistence</artifactId>
+                <version>1.99.0</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+
+            <!-- JCR -->
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>javax.jcr</groupId>
+                <artifactId>jcr</artifactId>
+                <version>2.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- jUnit -->
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>com.springsource.org.junit</artifactId>
+                <version>4.8.1</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- ObjectWeb ASM -->
+            <dependency>
+                <groupId>org.objectweb.asm</groupId>
+                <artifactId>com.springsource.org.objectweb.asm</artifactId>
+                <version>1.5.3</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+
+            <!-- OSGI -->
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.core</artifactId>
+                <version>4.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.compendium</artifactId>
+                <version>4.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Servlets/JSP -->
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>javax.servlet</groupId>
+                <artifactId>com.springsource.javax.servlet</artifactId>
+                <version>2.5.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>javax.servlet</groupId>
+                <artifactId>com.springsource.javax.servlet.jsp</artifactId>
+                <version>2.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- SLF4j -->
+            <dependency>
+                <!-- Provided by CQ -->
+                <groupId>org.slf4j</groupId>
+                <artifactId>com.springsource.slf4j.api</artifactId>
+                <version>1.6.1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.5</version>
+                <scope>test</scope>
+            </dependency>
+
+
+            <!-- Sling, all provided by CQ -->
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.settings</artifactId>
+                <version>1.2.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.rewriter</artifactId>
+                <version>1.0.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.api</artifactId>
+                <version>2.3.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.jcr.api</artifactId>
+                <version>2.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.commons.osgi</artifactId>
+                <version>2.2.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.rewriter</artifactId>
+                <version>1.0.4</version>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <!-- Spring Framework -->
+            <!-- AOP Alliance -->
+            <dependency>
+                <groupId>org.aopalliance</groupId>
+                <artifactId>com.springsource.org.aopalliance</artifactId>
+                <version>1.0.0</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.aop</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.beans</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.context</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.context.support</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.core</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.expression</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.oxm</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>org.springframework.web</artifactId>
+                <version>3.2.2.RELEASE</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+	         
+	         <!-- Apache Http Components -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>com.springsource.org.apache.httpcomponents.httpclient</artifactId>
+                <version>4.2.1</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>com.springsource.org.apache.httpcomponents.httpcore</artifactId>
+                <version>4.2.1</version>
+                <scope>${externalDependencyScope}</scope>
+            </dependency>
+            
+             <!-- Jackson -->
+	         <dependency>
+	            <groupId>org.codehaus.jackson</groupId>
+	            <artifactId>jackson-core-asl</artifactId>
+	            <version>1.9.12</version>
+	         </dependency>
+	         <dependency>
+	            <groupId>org.codehaus.jackson</groupId>
+	            <artifactId>jackson-mapper-asl</artifactId>
+	            <version>1.9.12</version>
+	         </dependency>
+
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>1.8.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>fontbox</artifactId>
+                <version>1.8.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>jempbox</artifactId>
+                <version>1.8.1</version>
+            </dependency>
+            
+        </dependencies>
+    </dependencyManagement>
+
+    <profiles>
+        <profile>
+            <id>autoInstallBundle</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>publish</id>
+            <properties>
+                <crx.host>localhost</crx.host>
+                <crx.port>4503</crx.port>
+            </properties>
+        </profile>
+    </profiles>
+
+    <repositories>
+        <repository>
+            <id>adobe-public-releases</id>
+            <name>Adobe Public Repository</name>
+            <url>http://repo.adobe.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>com.springsource.repository.bundles.release</id>
+            <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+            <url>http://repository.springsource.com/maven/bundles/release</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>com.springsource.repository.bundles.external</id>
+            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+            <url>http://repository.springsource.com/maven/bundles/external</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>adobe-public-releases</id>
+            <name>Adobe Public Repository</name>
+            <url>http://repo.adobe.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <modules>
+        <module>cookbook-config</module>
+        <module>cookbook-bundle</module>
+        <module>cookbook-ui</module>
+        <module>cookbook-dependencies</module>
+        <module>cookbook-content</module>
+        <module>cookbook-login</module>
+        <module>cookbook-secure</module>
+    </modules>
+</project>

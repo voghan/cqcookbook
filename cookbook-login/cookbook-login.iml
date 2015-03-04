@@ -4,10 +4,10 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="cookbook-login-1.0-SNAPSHOT.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="ams.amscorp-secure" bundleVersion="1.0-SNAPSHOT" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
+          <property key="Bundle-Description" value="Maven Multimodule project for Cookbook" />
           <property key="Import-Package" value="!com.day.crx.core.token,!org.apache.jackrabbit.*,*" />
           <property key="Fragment-Host" value="com.day.crx.sling.server" />
           <property key="Bundle-Name" value="Cookbook Login Module" />
-          <property key="Bundle-Description" value="Maven Multimodule project for Cookbook" />
           <property key="Include-Resource" value="configuration=$MODULE_DIR$/src/main/resources/configuration" />
         </additionalProperties>
         <additionalJARContents />
@@ -26,7 +26,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jcr:jcr:2.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.6.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.5.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-log4j12:1.7.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-api:2.6.2" level="project" />
